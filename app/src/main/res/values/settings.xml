@@ -1,5 +1,21 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="settings_text">Ustawienia</string>
-    <string name="background_text">Kolor Tła:</string>
-    <string name="precision">Precyzja Liczb:</string>
+    <string name="theme_text">Motyw Tła:</string>
+    <string name="precision_text">Precyzja Liczb:</string>
+
+    <integer-array name="precision_options">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+
+    <string-array name="theme_options">
+        <item>Czerwony</item>
+        <item>Zielony</item>
+        <item>Niebieski</item>
+    </string-array>
 </resources>

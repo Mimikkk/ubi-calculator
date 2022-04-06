@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pad_gray_2"
+    android:background="@drawable/inset_border"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:padding="16dp"
     tools:context=".SettingsLayout">
 
     <TextView
-        android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -19,23 +19,27 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:fontFamily="sans-serif-black"
         android:layout_height="wrap_content"
-        android:text="@string/background_text" />
+        android:fontFamily="sans-serif-black"
+        android:text="@string/theme_text"
+
+        />
 
     <Spinner
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:entries="@array/theme_options" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="@string/precision" />
+        android:text="@string/precision_text" />
 
     <Spinner
         android:id="@+id/precision"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:entries="@array/precision_options" />
 </LinearLayout>

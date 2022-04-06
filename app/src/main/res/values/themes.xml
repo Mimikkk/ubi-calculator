@@ -13,4 +13,22 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <declare-styleable name="Screen">
+        <attr name="screen_tint" format="color" />
+    </declare-styleable>
+
+    <style name="RedTheme">
+        <item name="screen_tint">@color/screen_red</item>
+    </style>
+
+    <style name="GreenTheme">
+        <item name="screen_tint">@color/screen_green</item>
+    </style>
+
+    <style name="BlueTheme">
+        <item name="screen_tint">@color/screen_blue</item>
+    </style>
+
+    <style name="DefaultTheme" parent="GreenTheme" />
 </resources>

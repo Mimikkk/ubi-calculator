@@ -3,12 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="screen_green">#8EB498</color>
+    <color name="screen_blue">#8E98B4</color>
+    <color name="screen_red">#B48E94</color>
     <color name="pad_gray_1">#787878</color>
     <color name="pad_gray_2">#585858</color>
     <color name="pad_gray_3">#404040</color>
     <color name="pad_gray_4">#383838</color>
     <color name="pad_yellow">#ffd020</color>
-    <color name="pad_blue">#8080ff</color>
     <color name="pad_red">#FF8A80</color>
-    <color name="pad_white">#ffffff</color>
 </resources>

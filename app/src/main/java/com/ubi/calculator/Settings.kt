@@ -1,3 +1,8 @@
 package com.ubi.calculator
 
-data class Settings(var screenColor: String? = "green", var numberPrecision: Int = 2)
+import java.io.Serializable
+
+object Settings : Serializable {
+  var numberPrecision: Int = 2
+  var screenTheme: Int = R.style.DefaultTheme
+}

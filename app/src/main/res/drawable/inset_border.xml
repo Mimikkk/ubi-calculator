@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="200dp"
-    android:height="200dp"
+    android:width="40dp"
+    android:height="40dp"
     android:viewportWidth="100"
     android:viewportHeight="100">
 
@@ -10,7 +10,7 @@
         android:pathData="M 0 0 L 100 0 L 100 100 L 0 100 z" />
     <group android:translateX="1" android:translateY="1">
         <path
-            android:fillColor="@color/screen_green"
+            android:fillColor="?attr/screen_tint"
             android:pathData="M 0 0 L 96 0 L 96 96 L 0 96 z" />
     </group>
     <group android:translateX="1" android:translateY="1">
