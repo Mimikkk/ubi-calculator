@@ -1,0 +1,5 @@
+<resources>
+    <string name="settings">Ustawienia</string>
+    <string name="background_text">Kolor Tła:</string>
+    <string name="precision">Precyzja Liczb:</string>
+</resources>
