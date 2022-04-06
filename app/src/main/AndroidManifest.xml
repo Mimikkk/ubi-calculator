@@ -21,11 +21,14 @@
         <activity
             android:name=".SettingsLayout"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:parentActivityName=".CalculatorLayout">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.PREFERENCE" />
             </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CalculatorLayout" />
         </activity>
     </application>
 </manifest>

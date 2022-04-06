@@ -12,35 +12,40 @@ import com.ubi.calculator.databinding.SettingsLayoutBinding
 
 class SettingsLayout : AppCompatActivity() {
   private lateinit var binding: SettingsLayoutBinding
-  private val PrecisionOptions = (0..10).toList()
-  private val ThemeOptions = listOf("Red", "Green", "Blue")
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
     binding = SettingsLayoutBinding.inflate(layoutInflater)
     setContentView(binding.root)
 
+    handleThemeChange()
+    binding.background.onItemSelectedListener = object : OnItemSelectedListener {
+      override fun onNothingSelected(parent: AdapterView<*>?) = Unit
+
+      override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        when (position) {
+          0 -> Settings.screenTheme = R.style.GreenTheme
+          1 -> Settings.screenTheme = R.style.RedTheme
+          2 -> Settings.screenTheme = R.style.BlueTheme
+        }
+        handleThemeChange()
+      }
+    }
+    binding.precision.onItemSelectedListener = object : OnItemSelectedListener {
+      override fun onNothingSelected(parent: AdapterView<*>?) = Unit
+
+      override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        Settings.numberPrecision = position
+      }
+    }
+  }
+
+  fun handleThemeChange() {
     binding.screen.background = VectorDrawableCompat.create(
       resources,
       R.drawable.inset_border,
       ContextThemeWrapper(this, Settings.screenTheme).theme
     )
-
-    binding.background.onItemSelectedListener = object : OnItemSelectedListener {
-      override fun onNothingSelected(parent: AdapterView<*>?) = Unit
-
-      override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        Log.d("SettingsLayout", "onItemSelected: $position $id $view $parent")
-      }
-    }
-  }
-
-
-  private fun changeTheme(var1: AdapterView<*>?, var2: View?, var3: Int, var4: Long) {
-    Log.e("Precision", "Precision changed")
-  }
-
-  private fun changePrecision(view: View) {
-    Log.e("Precision", "Precision changed")
   }
 }

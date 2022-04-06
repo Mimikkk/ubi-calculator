@@ -3,7 +3,7 @@
     <string name="theme_text">Motyw Tła:</string>
     <string name="precision_text">Precyzja Liczb:</string>
 
-    <integer-array name="precision_options">
+    <string-array name="precision_options">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -11,11 +11,11 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
-    </integer-array>
+    </string-array>
 
     <string-array name="theme_options">
-        <item>Czerwony</item>
         <item>Zielony</item>
+        <item>Czerwony</item>
         <item>Niebieski</item>
     </string-array>
 </resources>
