@@ -1,7 +1,6 @@
 package com.ubi.calculator
 
 import android.os.Bundle
-import android.util.Log
 import android.view.ContextThemeWrapper
 import android.view.View
 import android.widget.AdapterView
@@ -13,7 +12,7 @@ import com.ubi.calculator.databinding.SettingsLayoutBinding
 class SettingsLayout : AppCompatActivity() {
   private companion object {
     var SelectedTheme = 0
-    var SelectedPrecision = 0
+    var SelectedPrecision = Settings.precision
   }
 
   private lateinit var binding: SettingsLayoutBinding
@@ -43,7 +42,7 @@ class SettingsLayout : AppCompatActivity() {
       override fun onNothingSelected(parent: AdapterView<*>?) = Unit
 
       override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        Settings.numberPrecision = position
+        Settings.precision = position
         SelectedPrecision = position
       }
     }

@@ -60,7 +60,6 @@ class CalculatorLayout : AppCompatActivity() {
 
   override fun onResume() {
     handleThemeChange()
-    handlePrecisionChange()
     super.onResume()
   }
 

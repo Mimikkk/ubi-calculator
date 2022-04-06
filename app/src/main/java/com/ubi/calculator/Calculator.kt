@@ -1,6 +1,7 @@
 package com.ubi.calculator
 
 import android.util.Log
+import java.math.BigDecimal
 import kotlin.math.pow
 
 enum class Operator {
@@ -33,8 +34,11 @@ class Calculator {
     }
 
   fun add(value: String) {
-    if (isNumeric(level) && !level.startsWith("0")) level += value
-    else level = value
+    if (!isInPrecisionBound(level + value)) return
+
+    if ((isNumeric(level) || (value == "0" && !level.startsWith("0")))) {
+      level += value
+    } else level = value
   }
 
   fun clear() {
@@ -112,6 +116,7 @@ class Calculator {
       levels.add(level)
     }
 
+
     level = operator.toString()
     val second = levels.removeAt(levels.size - 1).toDouble()
     val first = levels.removeAt(levels.size - 1).toDouble()
@@ -126,7 +131,11 @@ class Calculator {
         Operator.Power -> second.pow(first)
       }
       if (value.isInfinite()) throw ArithmeticException()
-      levels.add(value.toString())
+
+      levels.add(BigDecimal(value)
+        .setScale(Settings.precision, BigDecimal.ROUND_HALF_DOWN)
+        .toString()
+        .trimEnd('0'))
       onChange(level, levels)
     } catch (ignored: Exception) {
       level = "Error!"
@@ -134,6 +143,11 @@ class Calculator {
   }
 
   var onChange: (String, List<String>) -> Unit = { _, _ -> }
+
+  private fun isInPrecisionBound(value: String): Boolean {
+    val precision = value.split('.')
+    return precision.size < 2 || precision[1].length <= Settings.precision
+  }
 
   private fun isNumeric(value: String): Boolean {
     return value.toDoubleOrNull() != null
