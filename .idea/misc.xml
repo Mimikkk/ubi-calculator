@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3775" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable/gloss.xml" value="0.2085" />
+        <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3775" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable/screen_border.xml" value="0.33" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable/screen_border_inset.xml" value="0.2985" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable/screen_decor.xml" value="0.2985" />
@@ -11,7 +13,10 @@
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/drawable/spinner_border.xml" value="0.2935" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/layout/calculator.xml" value="0.33" />
+        <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/layout/calculator_layout.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/layout/settings_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3775" />
+        <entry key="..\:/Users/Hououin Kyouma/AndroidStudioProjects/ubicalculator/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3775" />
       </map>
     </option>
   </component>
