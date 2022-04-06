@@ -59,6 +59,7 @@
         </LinearLayout>
 
         <GridLayout
+            android:id="@+id/pad"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
@@ -69,109 +70,7 @@
             android:rowCount="6">
 
             <Button
-                android:id="@+id/button32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/period"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="2"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num9"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num0"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="8"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num1"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num2"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button46"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/clear"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button45"
+                android:id="@+id/clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="0.1"
@@ -185,31 +84,32 @@
                 android:insetRight="4dp"
                 android:insetBottom="4dp"
                 android:padding="0dp"
-                android:text="@string/undo"
-                android:textColor="@color/pad_white" />
+                android:text="@string/clear"
+                android:textColor="@color/pad_yellow" />
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/drop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="0.1"
-                android:layout_columnWeight="1"
+                android:layout_columnWeight="2"
                 android:layout_gravity="fill"
                 android:backgroundTint="@color/pad_gray_4"
+                android:drawableTop="@drawable/gloss"
                 android:gravity="center"
                 android:insetLeft="4dp"
                 android:insetTop="4dp"
                 android:insetRight="4dp"
                 android:insetBottom="4dp"
                 android:padding="0dp"
-                android:text="@string/num6"
-                android:textColor="@color/pad_white" />
+                android:text="@string/drop"
+                android:textColor="@color/pad_red" />
 
             <Button
-                android:id="@+id/button43"
+                android:id="@+id/swap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="0.1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:backgroundTint="@color/pad_gray_4"
@@ -221,13 +121,66 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/swap"
+                android:textColor="@color/pad_red" />
+
+            <Button
+                android:id="@+id/undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="8"
+                android:drawableTop="@drawable/gloss"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/undo"
+                android:textColor="@color/pad_red" />
+
+            <Button
+                android:id="@+id/sqrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/sqrt"
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button47"
+                android:id="@+id/power"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:drawableTop="@drawable/gloss"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/power"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/plusminus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="0.1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:backgroundTint="@color/pad_gray_4"
@@ -241,27 +194,10 @@
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/division"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num8"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button39"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_rowWeight="0.1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:backgroundTint="@color/pad_gray_4"
@@ -275,75 +211,7 @@
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num3"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:drawableTop="@drawable/gloss"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/power"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button36"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/plus"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/num5"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button27"
+                android:id="@+id/num7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -360,7 +228,58 @@
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button26"
+                android:id="@+id/num8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/num8"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/num9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/num9"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/multiplication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/multiplication"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/num4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -377,28 +296,10 @@
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button40"
+                android:id="@+id/num5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/sqrt"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:backgroundTint="@color/pad_gray_4"
@@ -409,11 +310,113 @@
                 android:insetRight="4dp"
                 android:insetBottom="4dp"
                 android:padding="0dp"
-                android:text="@string/drop"
+                android:text="@string/num5"
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button38"
+                android:id="@+id/num6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/num6"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/minus"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/num1"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/num2"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/num3"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/plus"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/num0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="0.1"
@@ -426,11 +429,28 @@
                 android:insetRight="4dp"
                 android:insetBottom="4dp"
                 android:padding="0dp"
-                android:text="@string/multiplication"
+                android:text="@string/num0"
                 android:textColor="@color/pad_white" />
 
             <Button
-                android:id="@+id/button44"
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/pad_gray_4"
+                android:gravity="center"
+                android:insetLeft="4dp"
+                android:insetTop="4dp"
+                android:insetRight="4dp"
+                android:insetBottom="4dp"
+                android:padding="0dp"
+                android:text="@string/period"
+                android:textColor="@color/pad_white" />
+
+            <Button
+                android:id="@+id/enter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="0.1"
@@ -445,27 +465,10 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/enter"
-                android:textColor="@color/pad_white" />
+                android:textColor="@color/pad_yellow" />
 
             <Button
-                android:id="@+id/button37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:backgroundTint="@color/pad_gray_4"
-                android:gravity="center"
-                android:insetLeft="4dp"
-                android:insetTop="4dp"
-                android:insetRight="4dp"
-                android:insetBottom="4dp"
-                android:padding="0dp"
-                android:text="@string/minus"
-                android:textColor="@color/pad_white" />
-
-            <Button
-                android:id="@+id/button48"
+                android:id="@+id/settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="0.1"
@@ -480,7 +483,7 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/settings"
-                android:textColor="@color/pad_white" />
+                android:textColor="@color/pad_yellow" />
 
         </GridLayout>
 

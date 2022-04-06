@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings">⚙</string>
-    <string name="multiplication">×</string>
-    <string name="sqrt">√</string>
+    <string name="clear">AC</string>
     <string name="enter">ENTER</string>
     <string name="drop">DROP</string>
     <string name="power">PWR</string>
     <string name="swap">SWAP</string>
     <string name="undo">UNDO</string>
-    <string name="clear">AC</string>
+    <string name="settings">⚙</string>
+    <string name="multiplication">×</string>
+    <string name="sqrt">√</string>
     <string name="minus">−</string>
     <string name="plus">+</string>
     <string name="division">÷</string>
