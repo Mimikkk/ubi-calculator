@@ -11,15 +11,19 @@ import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.ubi.calculator.databinding.SettingsLayoutBinding
 
 class SettingsLayout : AppCompatActivity() {
-  private lateinit var binding: SettingsLayoutBinding
+  private companion object {
+    var SelectedTheme = 0
+    var SelectedPrecision = 0
+  }
 
+  private lateinit var binding: SettingsLayoutBinding
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
     binding = SettingsLayoutBinding.inflate(layoutInflater)
     setContentView(binding.root)
 
-    handleThemeChange()
+    binding.background.setSelection(SelectedTheme)
     binding.background.onItemSelectedListener = object : OnItemSelectedListener {
       override fun onNothingSelected(parent: AdapterView<*>?) = Unit
 
@@ -30,18 +34,22 @@ class SettingsLayout : AppCompatActivity() {
           2 -> Settings.screenTheme = R.style.BlueTheme
         }
         handleThemeChange()
+        SelectedTheme = position
       }
     }
+
+    binding.precision.setSelection(SelectedPrecision)
     binding.precision.onItemSelectedListener = object : OnItemSelectedListener {
       override fun onNothingSelected(parent: AdapterView<*>?) = Unit
 
       override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         Settings.numberPrecision = position
+        SelectedPrecision = position
       }
     }
   }
 
-  fun handleThemeChange() {
+  private fun handleThemeChange() {
     binding.screen.background = VectorDrawableCompat.create(
       resources,
       R.drawable.inset_border,
