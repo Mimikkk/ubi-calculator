@@ -2,6 +2,8 @@ package com.ubi.calculator
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
+import android.graphics.fonts.Font
 import android.os.Bundle
 import android.view.ContextThemeWrapper
 import android.view.Gravity
@@ -10,6 +12,7 @@ import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.ubi.calculator.databinding.CalculatorLayoutBinding
 
@@ -54,12 +57,12 @@ class CalculatorLayout : AppCompatActivity() {
     binding.enter.setOnClickListener { Calculator.enter() }
     binding.plusminus.setOnClickListener { Calculator.plusminus() }
 
-
     Calculator.onChange = this@CalculatorLayout::reRenderStackLevels
   }
 
   override fun onResume() {
     handleThemeChange()
+    reRenderStackLevels(Calculator.level, Calculator.levels)
     super.onResume()
   }
 
@@ -96,12 +99,12 @@ fun createStackText(context: Context, prefix: String, text: String): LinearLayou
     addView(TextView(context).apply {
       this.text = "$prefix "
       gravity = Gravity.START
-      textSize = 36f
+      textSize = 24f
     })
     addView(Space(context))
     addView(TextView(context).apply {
       this.text = text
       gravity = Gravity.END
-      textSize = 36f
+      textSize = 24f
     })
   }

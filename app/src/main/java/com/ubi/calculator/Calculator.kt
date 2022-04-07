@@ -22,12 +22,12 @@ enum class Operator {
 }
 
 object Calculator {
-  private var levels = mutableListOf<String>()
+  var levels = mutableListOf<String>()
     set(value) {
       field = value
       onChange(level, value)
     }
-  private var level: String = ""
+  var level: String = ""
     set(value) {
       field = value
       onChange(value, levels)
