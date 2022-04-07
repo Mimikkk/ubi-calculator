@@ -19,7 +19,27 @@
             android:background="@drawable/inset_border"
             android:orientation="vertical"
             android:paddingHorizontal="16dp"
-            android:paddingVertical="10dp" />
+            android:paddingVertical="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
 
         <GridLayout
             android:id="@+id/pad"
@@ -105,7 +125,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/undo"
-                android:textColor="@color/pad_red" />
+                android:textColor="@color/pad_red"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/sqrt"
@@ -122,7 +143,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/sqrt"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/power"
@@ -140,7 +162,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/power"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/plusminus"
@@ -157,7 +180,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/plusminus"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/division"
@@ -174,7 +198,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/division"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num7"
@@ -191,7 +216,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num7"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num8"
@@ -208,7 +234,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num8"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num9"
@@ -225,7 +252,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num9"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/multiplication"
@@ -242,7 +270,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/multiplication"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num4"
@@ -259,7 +288,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num4"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num5"
@@ -277,7 +307,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num5"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num6"
@@ -294,7 +325,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num6"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/minus"
@@ -311,7 +343,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/minus"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num1"
@@ -328,7 +361,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num1"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num2"
@@ -345,7 +379,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num2"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num3"
@@ -362,7 +397,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num3"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/plus"
@@ -379,7 +415,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/plus"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/num0"
@@ -396,7 +433,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/num0"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/period"
@@ -413,7 +451,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/period"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/settings"
@@ -431,7 +470,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/settings"
-                android:textColor="@color/pad_yellow" />
+                android:textColor="@color/pad_yellow"
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/enter"
@@ -449,7 +489,8 @@
                 android:insetBottom="4dp"
                 android:padding="0dp"
                 android:text="@string/enter"
-                android:textColor="@color/pad_yellow" />
+                android:textColor="@color/pad_yellow"
+                android:textSize="24sp" />
 
         </GridLayout>
 

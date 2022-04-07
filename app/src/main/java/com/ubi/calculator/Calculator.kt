@@ -21,7 +21,7 @@ enum class Operator {
   }
 }
 
-class Calculator {
+object Calculator {
   private var levels = mutableListOf<String>()
     set(value) {
       field = value
