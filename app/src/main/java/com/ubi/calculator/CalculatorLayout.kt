@@ -1,9 +1,8 @@
 package com.ubi.calculator
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.graphics.Typeface
-import android.graphics.fonts.Font
 import android.os.Bundle
 import android.view.ContextThemeWrapper
 import android.view.Gravity
@@ -12,7 +11,6 @@ import android.widget.LinearLayout
 import android.widget.Space
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.ubi.calculator.databinding.CalculatorLayoutBinding
 
@@ -21,9 +19,9 @@ class CalculatorLayout : AppCompatActivity() {
 
   private lateinit var binding: CalculatorLayoutBinding
 
+  @SuppressLint("ClickableViewAccessibility")
   override fun onCreate(state: Bundle?) {
     super.onCreate(state)
-
     binding = CalculatorLayoutBinding.inflate(layoutInflater)
     setContentView(binding.root)
 
@@ -56,6 +54,12 @@ class CalculatorLayout : AppCompatActivity() {
     binding.undo.setOnClickListener { Calculator.undo() }
     binding.enter.setOnClickListener { Calculator.enter() }
     binding.plusminus.setOnClickListener { Calculator.plusminus() }
+
+    binding.root.setOnTouchListener(object : GestureListener(binding.root.context) {
+        override fun onSwipeRight() {
+          Calculator.undo()
+        }
+      })
 
     Calculator.onChange = this@CalculatorLayout::reRenderStackLevels
   }
