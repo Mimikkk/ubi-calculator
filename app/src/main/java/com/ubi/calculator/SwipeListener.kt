@@ -6,7 +6,7 @@ import android.view.MotionEvent
 import android.view.View
 import kotlin.math.abs
 
-open class GestureListener(context: Context?) : View.OnTouchListener {
+open class SwipeListener(context: Context?) : View.OnTouchListener {
   companion object {
     private const val SwipeThreshold = 100
     private const val SwipeVelocityThreshold = 100

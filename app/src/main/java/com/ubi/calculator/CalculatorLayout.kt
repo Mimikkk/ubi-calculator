@@ -55,7 +55,7 @@ class CalculatorLayout : AppCompatActivity() {
     binding.enter.setOnClickListener { Calculator.enter() }
     binding.plusminus.setOnClickListener { Calculator.plusminus() }
 
-    binding.root.setOnTouchListener(object : GestureListener(binding.root.context) {
+    binding.root.setOnTouchListener(object : SwipeListener(binding.root.context) {
         override fun onSwipeRight() {
           Calculator.undo()
         }
